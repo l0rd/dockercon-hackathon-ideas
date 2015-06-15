@@ -2,9 +2,9 @@
 
 ### DRY principle
 
-We use and love Docker Compose in development environments. In production however we need to use some more sophisticated orchestration tools. As a result we have two distinct configuration files that describe the same containers relations.
+We use and love Docker Compose in development environments. However in production we need to use some more sophisticated orchestration tools. As a result we have two distinct configuration files that describe the same containers relations.
 
-To comply with the [DRY principle](https://en.wikipedia.org/wiki/Don't_repeat_yourself) we need a tool transform a [compose yml file](https://docs.docker.com/compose/yml/) (used in dev environments) into a descriptor for the tools we use in production : 
+To follow the [DRY principle](https://en.wikipedia.org/wiki/Don't_repeat_yourself) we need a tool transform a [compose yml file](https://docs.docker.com/compose/yml/) (used in dev environments) into a descriptor for the tools we use in production : 
 * [Mesos Marathon recipes](https://github.com/mesosphere/marathon/blob/master/docs/docs/recipes.md)
 * [Kubernetes pod configuration file](https://cloud.google.com/container-engine/docs/pods/operations#pod_configuration_file)
 * [CoreOS fleet unit](https://coreos.com/docs/launching-containers/launching/fleet-unit-files/)
